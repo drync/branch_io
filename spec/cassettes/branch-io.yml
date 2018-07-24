@@ -563,4 +563,429 @@ http_interactions:
       string: '{"channel":"retest","tags":["test","test-update"],"data":{"$one_time_use":false,"~channel":"retest","~creation_source":0,"~id":"279236445598774158","~tags":["test","test-update"],"url":"https://ENV.test-app.link/LINK9xxx"},"type":0,"alias":null}'
     http_version: 
   recorded_at: Wed, 06 Jul 2016 13:56:24 GMT
+- request:
+    method: post
+    uri: https://api.branch.io/v2/event/standard
+    body:
+      encoding: UTF-8
+      string: '{"sdk":"api","branch_key":"<BRANCH_KEY>"}'
+    headers:
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '49'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Date:
+      - Tue, 24 Jul 2018 02:29:37 GMT
+      Server:
+      - openresty/1.11.2.1
+      X-Cache:
+      - Error from cloudfront
+      Via:
+      - 1.1 e1fec368f5b53b4a839d0400d00dede6.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - 7chy17Q3u2kJSDgbNFzMEcj7E02zOC_oNw-ivCXvDxaP_YSgm7_RPQ==
+    body:
+      encoding: UTF-8
+      string: '{"error":{"user_data":"missing required field"}}
+
+'
+    http_version: 
+  recorded_at: Tue, 24 Jul 2018 02:29:37 GMT
+- request:
+    method: post
+    uri: https://api.branch.io/v2/event/standard
+    body:
+      encoding: UTF-8
+      string: '{"sdk":"api","branch_key":"<BRANCH_KEY>","name":"PURCHASE","user_data":{"environment":"FULL_APP"},"event_data":{"currency":"USD","shipping":5,"tax":0,"revenue":35,"transaction_id":"Order-11"}}'
+    headers:
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '224'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Date:
+      - Tue, 24 Jul 2018 02:29:37 GMT
+      Server:
+      - openresty/1.11.2.1
+      X-Cache:
+      - Error from cloudfront
+      Via:
+      - 1.1 40346f3f2e6491f9dd0c511645b5834d.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - uuF1F4PUsm-U5Ex8Vbx7yVy-rcQ0XnbGR_tuMPab0putZxkZ6zItAQ==
+    body:
+      encoding: UTF-8
+      string: '{"error":{"user_data":["Request with non-mobile OS should have developer_identity
+        and\/or browser_fingerprint_id","Request with non-mobile OS should have developer_identity
+        and\/or browser_fingerprint_id"],"event_data":{}}}
+
+'
+    http_version: 
+  recorded_at: Tue, 24 Jul 2018 02:29:37 GMT
+- request:
+    method: post
+    uri: https://api.branch.io/v2/event/standard
+    body:
+      encoding: UTF-8
+      string: '{"sdk":"api","branch_key":"<BRANCH_KEY>","name":"PURCHASE","user_data":{"os":"iOS","os_version":"11.0.1","environment":"FULL_APP","developer_identity":"1","app_version":"1.0.1"},"custom_data":{"purchase_location":"Joes
+        Liquor Barn","store_pickup":"unavailable"},"event_data":{"currency":"USD","shipping":5,"tax":0,"revenue":35,"transaction_id":"Order-11"},"content_items":[{"$content_schema":"COMMERCE_PRODUCT","$price":100,"$quantity":2,"$sku":"112320","$product_name":"Domaine
+        de la Romanee-Conti Romanee-Conti Grand Cru 1990.","$product_category":"FOOD_BEVERAGES_AND_TOBACCO","$product_variant":"750ml
+        Current Vintage"}],"metadata":{}}'
+    headers:
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '29'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Date:
+      - Tue, 24 Jul 2018 02:29:37 GMT
+      Server:
+      - openresty/1.11.2.1
+      X-Branch-Event-Extra:
+      - "{}"
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 0ab36911ca4960d388d49f382630062c.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - WWF8KtgzmeMhjxpx4zMW2vIWLfKxTCq2oj_YoSAVo3y4e7tJZCZqcw==
+    body:
+      encoding: UTF-8
+      string: '{"branch_view_enabled":false}'
+    http_version: 
+  recorded_at: Tue, 24 Jul 2018 02:29:37 GMT
+- request:
+    method: post
+    uri: https://api.branch.io/v2/event/standard
+    body:
+      encoding: UTF-8
+      string: '{"sdk":"api","branch_key":"<BRANCH_KEY>","name":"PURCHASE","user_data":{"os":"Android","os_version":"4.0.0","environment":"FULL_APP","developer_identity":"1","app_version":"1.0.1"},"event_data":{"currency":"USD","shipping":5,"tax":0,"revenue":35,"transaction_id":"Order-11"}}'
+    headers:
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '29'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Date:
+      - Tue, 24 Jul 2018 02:29:38 GMT
+      Server:
+      - openresty/1.11.2.1
+      X-Branch-Event-Extra:
+      - "{}"
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 e8cd61c9b2a785e4fc8167b0177016b8.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - qZnIAEWr9EkUIAfu0HK6E06BJuvnSdC8xAXyO-jyeYkmLyz9oP1nkg==
+    body:
+      encoding: UTF-8
+      string: '{"branch_view_enabled":false}'
+    http_version: 
+  recorded_at: Tue, 24 Jul 2018 02:29:38 GMT
+- request:
+    method: post
+    uri: https://api.branch.io/v2/event/custom
+    body:
+      encoding: UTF-8
+      string: '{"sdk":"api","branch_key":"<BRANCH_KEY>"}'
+    headers:
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '49'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Date:
+      - Tue, 24 Jul 2018 03:15:27 GMT
+      Server:
+      - openresty/1.11.2.1
+      X-Cache:
+      - Error from cloudfront
+      Via:
+      - 1.1 f5171077d7910626ec3cf65e0c222f3c.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - xNAUnCTZ2dH_qBlMhpjAi8VkkiM3Nc2QO0z38NksEhfFwwo6cJf27g==
+    body:
+      encoding: UTF-8
+      string: '{"error":{"user_data":"missing required field"}}
+
+'
+    http_version: 
+  recorded_at: Tue, 24 Jul 2018 03:15:27 GMT
+- request:
+    method: post
+    uri: https://api.branch.io/v2/event/standard
+    body:
+      encoding: UTF-8
+      string: '{"sdk":"api","branch_key":"<BRANCH_KEY>","name":"Purchase","user_data":{"environment":"FULL_APP"},"event_data":{"currency":"USD","shipping":5,"tax":0,"revenue":35,"transaction_id":"Order-11"}}'
+    headers:
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '252'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Date:
+      - Tue, 24 Jul 2018 03:15:27 GMT
+      Server:
+      - openresty/1.11.2.1
+      X-Cache:
+      - Error from cloudfront
+      Via:
+      - 1.1 2a45d2b5ea9ef7dcb9d372459729c164.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - OQaFvu-M4025jDwkeLTmuoF-HC0EPzATcOnpT1UD6oSFuZz9oTbGcQ==
+    body:
+      encoding: UTF-8
+      string: '{"error":{"user_data":["Request with non-mobile OS should have developer_identity
+        and\/or browser_fingerprint_id","Request with non-mobile OS should have developer_identity
+        and\/or browser_fingerprint_id"],"name":"not a valid option","event_data":{}}}
+
+'
+    http_version: 
+  recorded_at: Tue, 24 Jul 2018 03:15:28 GMT
+- request:
+    method: post
+    uri: https://api.branch.io/v2/event/custom
+    body:
+      encoding: UTF-8
+      string: '{"sdk":"api","branch_key":"<BRANCH_KEY>","name":"PURCHASE","user_data":{"os":"iOS","os_version":"11.0.1","environment":"FULL_APP","developer_identity":"1","app_version":"1.0.1"},"custom_data":{"purchase_location":"Joes
+        Liquor Barn","store_pickup":"unavailable"},"event_data":{"currency":"USD","shipping":5,"tax":0,"revenue":35,"transaction_id":"Order-11"},"content_items":[{"$content_schema":"COMMERCE_PRODUCT","$price":100,"$quantity":2,"$sku":"112320","$product_name":"Domaine
+        de la Romanee-Conti Romanee-Conti Grand Cru 1990.","$product_category":"FOOD_BEVERAGES_AND_TOBACCO","$product_variant":"750ml
+        Current Vintage"}],"metadata":{}}'
+    headers:
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '29'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Date:
+      - Tue, 24 Jul 2018 03:15:28 GMT
+      Server:
+      - openresty/1.11.2.1
+      X-Branch-Event-Extra:
+      - "{}"
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 c795828dd110eb9881b0d985e479eaac.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - yn9lNJ_MZMLmXVaXweE7wEd_VkoGGM8QHW9Ng6GfkPrgvNpTrWReVw==
+    body:
+      encoding: UTF-8
+      string: '{"branch_view_enabled":false}'
+    http_version: 
+  recorded_at: Tue, 24 Jul 2018 03:15:28 GMT
+- request:
+    method: post
+    uri: https://api.branch.io/v2/event/custom
+    body:
+      encoding: UTF-8
+      string: '{"sdk":"api","branch_key":"<BRANCH_KEY>","name":"PURCHASE","user_data":{"os":"Android","os_version":"4.0.0","environment":"FULL_APP","developer_identity":"1","app_version":"1.0.1"},"event_data":{"currency":"USD","shipping":5,"tax":0,"revenue":35,"transaction_id":"Order-11"}}'
+    headers:
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '29'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Date:
+      - Tue, 24 Jul 2018 03:15:29 GMT
+      Server:
+      - openresty/1.11.2.1
+      X-Branch-Event-Extra:
+      - "{}"
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 2feec21fa6ad8ca419b922ab129d0a2a.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - 20bpMguyCpT8uDEkRYNhSPmJlTF1F05eWaN5qNP1JcUyYv8Ao8V1Rw==
+    body:
+      encoding: UTF-8
+      string: '{"branch_view_enabled":false}'
+    http_version: 
+  recorded_at: Tue, 24 Jul 2018 03:15:29 GMT
+- request:
+    method: post
+    uri: https://api.branch.io/v2/event/standard
+    body:
+      encoding: UTF-8
+      string: '{"sdk":"api","branch_key":"<BRANCH_KEY>","name":"Purchase","user_data":{"os":"iOS","os_version":"11.0.1","environment":"FULL_APP","developer_identity":"1","app_version":"1.0.1"},"custom_data":{"purchase_location":"Joes
+        Liquor Barn","store_pickup":"unavailable"},"event_data":{"currency":"USD","shipping":5,"tax":0,"revenue":35,"transaction_id":"Order-11"},"content_items":[{"$content_schema":"COMMERCE_PRODUCT","$price":100,"$quantity":2,"$sku":"112320","$product_name":"Domaine
+        de la Romanee-Conti Romanee-Conti Grand Cru 1990.","$product_category":"FOOD_BEVERAGES_AND_TOBACCO","$product_variant":"750ml
+        Current Vintage"}],"metadata":{}}'
+    headers:
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '94'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Date:
+      - Tue, 24 Jul 2018 03:17:04 GMT
+      Server:
+      - openresty/1.11.2.1
+      X-Cache:
+      - Error from cloudfront
+      Via:
+      - 1.1 9c77410e22dc74e7bd4296ee24a7bbce.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - ncvi_wXDHCj2zEhWyVE4btBAdMDqUzM3PREY_RXXj3kMh76Fp24L1w==
+    body:
+      encoding: UTF-8
+      string: '{"error":{"content_items":[{}],"custom_data":{},"name":"not a valid
+        option","event_data":{}}}
+
+'
+    http_version: 
+  recorded_at: Tue, 24 Jul 2018 03:17:04 GMT
+- request:
+    method: post
+    uri: https://api.branch.io/v2/event/custom
+    body:
+      encoding: UTF-8
+      string: '{"sdk":"api","branch_key":"<BRANCH_KEY>","name":"PICTURE_SWIPED","user_data":{"os":"iOS","os_version":"11.0.1","environment":"FULL_APP","developer_identity":"1","app_version":"1.0.1"},"custom_data":{"picture_location":"Joes
+        Liquor Barn","store_pickup":"unavailable"}}'
+    headers:
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '29'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Date:
+      - Tue, 24 Jul 2018 05:08:44 GMT
+      Server:
+      - openresty/1.11.2.1
+      X-Branch-Event-Extra:
+      - "{}"
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 3cbfe28b5f1fd858b3466f86889d19b3.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - E6gfKroicu3k4g104_yacAy7xYrAjyV47uzSYdgQKLeE1gVoGc5kng==
+    body:
+      encoding: UTF-8
+      string: '{"branch_view_enabled":false}'
+    http_version: 
+  recorded_at: Tue, 24 Jul 2018 05:08:44 GMT
 recorded_with: VCR 3.0.3

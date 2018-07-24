@@ -1,6 +1,7 @@
 require "branch_io/version"
 require "branch_io/client"
 require "branch_io/link_properties"
+require "branch_io/event_properties"
 
 module BranchIO
   # Default client helper methods: delegate unknown calls to a new Client instance w/ default constructor params

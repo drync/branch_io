@@ -181,6 +181,66 @@ end
 **The only difference between `#update_link` and `#update_link!` is that the latter version will
 raise a new `BranchIO::ErrorApiCallFailed` exception in case of an error.**
 
+### `Client#event` and `Client#event!`: 
+
+Logs one of the following [events](https://docs.branch.io/pages/apps/v2event/#available-events):
+
+- [Commerce Event](https://github.com/BranchMetrics/branch-deep-linking-public-api#logging-commerce-events)
+
+- [Content Event](https://github.com/BranchMetrics/branch-deep-linking-public-api#logging-content-events)
+
+- [Lifecycle Event](https://github.com/BranchMetrics/branch-deep-linking-public-api#logging-user-lifecycle-events)
+
+- [Custom Event](https://github.com/BranchMetrics/branch-deep-linking-public-api#logging-custom-events)
+
+This method logs an event to the `branch.io` service. The arguments are passed to a new instance of `BranchIO::EventProperties`.
+
+```ruby
+# Call the service
+res = client.event(
+  name: "PURCHASE",
+  user_data: {
+    os: "iOS",
+    os_version: "11.0.1",
+    environment: "FULL_APP",
+    developer_identity: "1",
+    app_version: "1.0.1"
+  },
+  custom_data: {
+    purchase_location: "Joes Liquor Barn",
+    store_pickup: "unavailable"
+  },
+  event_data: {
+    currency: "USD",
+    shipping: 5,
+    tax: 0,
+    revenue: 35,
+    transaction_id: "Order-11"
+  },
+  content_items: [
+    {
+      "$content_schema"   => "COMMERCE_PRODUCT",
+      "$price"            => 100,
+      "$quantity"         => 2,
+      "$sku"              => "112320",
+      "$product_name"     => "Domaine de la Romanee-Conti Romanee-Conti Grand Cru 1990.",
+      "$product_category" => "FOOD_BEVERAGES_AND_TOBACCO",
+      "$product_variant"  => "750ml Current Vintage"
+    }
+  ]
+)
+
+# Inspect the server response
+if res.success?
+  puts "Successfully created URL: #{res.url}"
+else
+  puts "Error creating URL: #{res.error}"
+end
+```
+
+_The only difference between `#event` and `#event!` is that the latter version will
+raise a new `BranchIO::ErrorApiCallFailed` exception in case of an error._
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.

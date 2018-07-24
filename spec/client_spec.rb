@@ -209,4 +209,211 @@ describe BranchIO::Client do
       end
     end
   end # /Client
+
+  describe BranchIO::Client::Events do
+    let(:client) { BranchIO::Client.new }
+    around do |example|
+      VCR.use_cassette('branch-io', record: :new_episodes,
+                       match_requests_on: [:method, :uri, :body]) { example.run }
+    end
+
+    describe "#event!" do
+      it "calls #event" do
+        res = double(validate!: true)
+        expect(client).to receive(:event).and_return(res)
+        client.event!
+      end
+
+      it "raises if the result is a failure" do
+        res = BranchIO::Client::ErrorResponse.new(double(success?: false))
+        expect(client).to receive(:event).and_return(res)
+
+        expect do
+          client.event!
+        end.to raise_error(BranchIO::Client::ErrorApiCallFailed)
+      end
+    end
+
+    describe "#event" do
+      describe "with no option" do
+        it "fails" do
+          pending unless ENV["BRANCH_KEY"]
+
+          res = client.event
+
+          expect(res).not_to be_nil
+          expect(res).to be_failure
+        end
+      end
+
+      describe "with incomplete options" do
+        it "fails" do
+          pending unless ENV["BRANCH_KEY"]
+
+          user_data = {
+            environment: "FULL_APP"
+          }
+          event_data = {
+            currency: "USD",
+            shipping: 5,
+            tax: 0,
+            revenue: 35,
+            transaction_id: "Order-11"
+          }
+          body = {
+            name: "PURCHASE",
+            user_data: user_data,
+            event_data: event_data
+          }
+
+          res = client.event(body)
+
+          expect(res).not_to be_nil
+          expect(res).to be_failure
+        end
+      end
+
+      describe "with correct options" do
+        it "succeeds" do
+          pending unless ENV["BRANCH_KEY"]
+
+          user_data = {
+            os: "iOS",
+            os_version: "11.0.1",
+            environment: "FULL_APP",
+            developer_identity: "1",
+            app_version: "1.0.1"
+          }
+          content_items = [
+            {
+              "$content_schema"   => "COMMERCE_PRODUCT",
+              "$price"            => 100,
+              "$quantity"         => 2,
+              "$sku"              => "112320",
+              "$product_name"     => "Domaine de la Romanee-Conti Romanee-Conti Grand Cru 1990.",
+              "$product_category" => "FOOD_BEVERAGES_AND_TOBACCO",
+              "$product_variant"  => "750ml Current Vintage"
+            }
+          ]
+          event_data = {
+            currency: "USD",
+            shipping: 5,
+            tax: 0,
+            revenue: 35,
+            transaction_id: "Order-11"
+          }
+          custom_data = {
+            purchase_location: "Joes Liquor Barn",
+            store_pickup: "unavailable"
+          }
+          body = {
+            name: "PURCHASE",
+            user_data: user_data,
+            custom_data: custom_data,
+            event_data: event_data,
+            content_items: content_items,
+            metadata: {}
+          }
+
+          res = client.event(body)
+
+          expect(res).not_to be_nil
+          expect(res).to be_success
+        end
+      end
+
+      describe "with a EventProperties instance" do
+        it "succeeds" do
+          pending unless ENV["BRANCH_KEY"]
+
+          user_data = {
+            os: "Android",
+            os_version: "4.0.0",
+            environment: "FULL_APP",
+            developer_identity: "1",
+            app_version: "1.0.1"
+          }
+          event_data = {
+            currency: "USD",
+            shipping: 5,
+            tax: 0,
+            revenue: 35,
+            transaction_id: "Order-11"
+          }
+          body = {
+            name: "PURCHASE",
+            user_data: user_data,
+            event_data: event_data
+          }
+
+          # Create a new event properties object
+          props = BranchIO::EventProperties.new(body)
+
+          # Pass the configuration object to the call
+          res = client.event(props)
+
+          # It should be successful
+          expect(res).not_to be_nil
+          expect(res).to be_success
+        end
+      end
+
+      describe "with custom event name" do
+        it "use custom event path" do
+          user_data = {
+            os: "iOS",
+            os_version: "11.0.1",
+            environment: "FULL_APP",
+            developer_identity: "1",
+            app_version: "1.0.1"
+          }
+          custom_data = {
+            picture_location: "Joes Liquor Barn",
+            store_pickup: "unavailable"
+          }
+          body = {
+            name: "PICTURE_SWIPED",
+            user_data: user_data,
+            custom_data: custom_data
+          }
+          # Create a new event properties object
+          props = BranchIO::EventProperties.new(body)
+          event_json = {
+            sdk: :api,
+            branch_key: ENV["BRANCH_KEY"]
+          }.merge(props.as_json)
+
+          res = double(success?: true)
+          expect(client).to receive(:post).with("/v2/event/custom", event_json).and_return(res)
+          client.event(props)
+        end
+
+        it "succeeds" do
+          pending unless ENV["BRANCH_KEY"]
+
+          user_data = {
+            os: "iOS",
+            os_version: "11.0.1",
+            environment: "FULL_APP",
+            developer_identity: "1",
+            app_version: "1.0.1"
+          }
+          custom_data = {
+            picture_location: "Joes Liquor Barn",
+            store_pickup: "unavailable"
+          }
+          body = {
+            name: "PICTURE_SWIPED",
+            user_data: user_data,
+            custom_data: custom_data
+          }
+
+          res = client.event(body)
+
+          expect(res).not_to be_nil
+          expect(res).to be_success
+        end
+      end
+    end
+  end # /Client
 end

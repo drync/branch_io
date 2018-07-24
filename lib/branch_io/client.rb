@@ -3,6 +3,7 @@ require "json"
 
 # Submodules (hold the api method calls)
 require_relative "client/links"
+require_relative "client/events"
 
 module BranchIO
   class Client
@@ -10,6 +11,7 @@ module BranchIO
 
     # Submodules
     include Links
+    include Events
 
     # Include HTTParty for requests
     include HTTParty
