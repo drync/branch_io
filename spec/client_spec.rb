@@ -217,29 +217,12 @@ describe BranchIO::Client do
                        match_requests_on: [:method, :uri, :body]) { example.run }
     end
 
-    describe "#event!" do
-      it "calls #event" do
-        res = double(validate!: true)
-        expect(client).to receive(:event).and_return(res)
-        client.event!
-      end
-
-      it "raises if the result is a failure" do
-        res = BranchIO::Client::ErrorResponse.new(double(success?: false))
-        expect(client).to receive(:event).and_return(res)
-
-        expect do
-          client.event!
-        end.to raise_error(BranchIO::Client::ErrorApiCallFailed)
-      end
-    end
-
-    describe "#event" do
+    describe "#log_standard_event" do
       describe "with no option" do
         it "fails" do
           pending unless ENV["BRANCH_KEY"]
 
-          res = client.event
+          res = client.log_standard_event
 
           expect(res).not_to be_nil
           expect(res).to be_failure
@@ -266,7 +249,7 @@ describe BranchIO::Client do
             event_data: event_data
           }
 
-          res = client.event(body)
+          res = client.log_standard_event(body)
 
           expect(res).not_to be_nil
           expect(res).to be_failure
@@ -315,7 +298,7 @@ describe BranchIO::Client do
             metadata: {}
           }
 
-          res = client.event(body)
+          res = client.log_standard_event(body)
 
           expect(res).not_to be_nil
           expect(res).to be_success
@@ -350,7 +333,7 @@ describe BranchIO::Client do
           props = BranchIO::EventProperties.new(body)
 
           # Pass the configuration object to the call
-          res = client.event(props)
+          res = client.log_standard_event(props)
 
           # It should be successful
           expect(res).not_to be_nil
@@ -358,8 +341,10 @@ describe BranchIO::Client do
         end
       end
 
-      describe "with custom event name" do
-        it "use custom event path" do
+      describe "with invalid event name" do
+        it "fails" do
+          pending unless ENV["BRANCH_KEY"]
+
           user_data = {
             os: "iOS",
             os_version: "11.0.1",
@@ -367,27 +352,58 @@ describe BranchIO::Client do
             developer_identity: "1",
             app_version: "1.0.1"
           }
+          content_items = [
+            {
+              "$content_schema"   => "COMMERCE_PRODUCT",
+              "$price"            => 100,
+              "$quantity"         => 2,
+              "$sku"              => "112320",
+              "$product_name"     => "Domaine de la Romanee-Conti Romanee-Conti Grand Cru 1990.",
+              "$product_category" => "FOOD_BEVERAGES_AND_TOBACCO",
+              "$product_variant"  => "750ml Current Vintage"
+            }
+          ]
+          event_data = {
+            currency: "USD",
+            shipping: 5,
+            tax: 0,
+            revenue: 35,
+            transaction_id: "Order-11"
+          }
           custom_data = {
-            picture_location: "Joes Liquor Barn",
+            purchase_location: "Joes Liquor Barn",
             store_pickup: "unavailable"
           }
           body = {
-            name: "PICTURE_SWIPED",
+            name: "RANDOM_EVENT_NAME",
             user_data: user_data,
-            custom_data: custom_data
+            custom_data: custom_data,
+            event_data: event_data,
+            content_items: content_items,
+            metadata: {}
           }
-          # Create a new event properties object
-          props = BranchIO::EventProperties.new(body)
-          event_json = {
-            sdk: :api,
-            branch_key: ENV["BRANCH_KEY"]
-          }.merge(props.as_json)
 
-          res = double(success?: true)
-          expect(client).to receive(:post).with("/v2/event/custom", event_json).and_return(res)
-          client.event(props)
+          res = client.log_standard_event(body)
+
+          expect(res).not_to be_nil
+          expect(res).to be_failure
         end
+      end
+    end
 
+    describe "#log_custom_event" do
+      describe "with no option" do
+        it "fails" do
+          pending unless ENV["BRANCH_KEY"]
+
+          res = client.log_custom_event
+
+          expect(res).not_to be_nil
+          expect(res).to be_failure
+        end
+      end
+
+      describe "with correct options" do
         it "succeeds" do
           pending unless ENV["BRANCH_KEY"]
 
@@ -399,16 +415,15 @@ describe BranchIO::Client do
             app_version: "1.0.1"
           }
           custom_data = {
-            picture_location: "Joes Liquor Barn",
-            store_pickup: "unavailable"
+            picture_location: "Joes Liquor Barn"
           }
           body = {
-            name: "PICTURE_SWIPED",
+            name: "TAKING PICTURE",
             user_data: user_data,
             custom_data: custom_data
           }
 
-          res = client.event(body)
+          res = client.log_custom_event(body)
 
           expect(res).not_to be_nil
           expect(res).to be_success

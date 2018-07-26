@@ -16,27 +16,29 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Access-Control-Allow-Origin:
-      - "*"
       Content-Type:
-      - application/json; charset=utf-8
-      Date:
-      - Wed, 06 Jul 2016 12:38:37 GMT
-      Server:
-      - openresty/1.7.7.2
-      X-Content-Type-Options:
-      - nosniff
-      X-Powered-By:
-      - Express
+      - application/json
       Content-Length:
       - '47'
       Connection:
       - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Date:
+      - Wed, 25 Jul 2018 16:16:27 GMT
+      Server:
+      - openresty/1.11.2.1
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 80a9a66193c3e6350d12faf1c397c974.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - X9u2ow_NQdCuFQe4PON7i-icPdv7XOp1g2zLd5v7HhRAZRQjAJG_UA==
     body:
       encoding: UTF-8
-      string: '{"url":"https://ENV.test-app.link/LINK1xxx"}'
+      string: '{"url":"https://uym7.test-app.link/Get7P7lnQO"}'
     http_version: 
-  recorded_at: Wed, 06 Jul 2016 12:38:37 GMT
+  recorded_at: Wed, 25 Jul 2018 16:16:27 GMT
 - request:
     method: post
     uri: https://api.branch.io/v1/url
@@ -53,27 +55,29 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Access-Control-Allow-Origin:
-      - "*"
       Content-Type:
-      - application/json; charset=utf-8
-      Date:
-      - Wed, 06 Jul 2016 12:38:37 GMT
-      Server:
-      - openresty/1.7.7.2
-      X-Content-Type-Options:
-      - nosniff
-      X-Powered-By:
-      - Express
+      - application/json
       Content-Length:
       - '47'
       Connection:
       - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Date:
+      - Wed, 25 Jul 2018 16:16:27 GMT
+      Server:
+      - openresty/1.11.2.1
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 70baa6f69f875c9e172c9118322fd6b5.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - VkBzoz25VsOGBPmP2jzBa5V_n1ueDMUFtac8tTcUxrHRX3JpX5G-UA==
     body:
       encoding: UTF-8
-      string: '{"url":"https://ENV.test-app.link/LINK2xxx"}'
+      string: '{"url":"https://uym7.test-app.link/SYlZS9lnQO"}'
     http_version: 
-  recorded_at: Wed, 06 Jul 2016 12:38:37 GMT
+  recorded_at: Wed, 25 Jul 2018 16:16:27 GMT
 - request:
     method: post
     uri: https://api.branch.io/v1/url/bulk/<BRANCH_KEY>
@@ -87,30 +91,32 @@ http_interactions:
       - application/json
   response:
     status:
-      code: 400
-      message: Bad Request
+      code: 200
+      message: OK
     headers:
-      Access-Control-Allow-Origin:
-      - "*"
       Content-Type:
-      - application/json; charset=utf-8
-      Date:
-      - Wed, 06 Jul 2016 12:38:38 GMT
-      Server:
-      - openresty/1.7.7.2
-      X-Content-Type-Options:
-      - nosniff
-      X-Powered-By:
-      - Express
+      - application/json
       Content-Length:
       - '2'
       Connection:
       - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Date:
+      - Wed, 25 Jul 2018 16:16:28 GMT
+      Server:
+      - openresty/1.13.6.2
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 b4eebfe47952c39ed1b8a9637b729eb4.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - q_LZc3jjCEJzxUfzgVkWp6n1SP1GgRedO0eEildOdQZs8bqL6BDMVQ==
     body:
       encoding: UTF-8
       string: "[]"
     http_version: 
-  recorded_at: Wed, 06 Jul 2016 12:38:38 GMT
+  recorded_at: Wed, 25 Jul 2018 16:16:28 GMT
 - request:
     method: post
     uri: https://api.branch.io/v1/url/bulk/<BRANCH_KEY>
@@ -127,27 +133,29 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Access-Control-Allow-Origin:
-      - "*"
       Content-Type:
-      - application/json; charset=utf-8
-      Date:
-      - Wed, 06 Jul 2016 12:38:39 GMT
-      Server:
-      - openresty/1.7.7.2
-      X-Content-Type-Options:
-      - nosniff
-      X-Powered-By:
-      - Express
+      - application/json
       Content-Length:
       - '97'
       Connection:
       - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Date:
+      - Wed, 25 Jul 2018 16:16:28 GMT
+      Server:
+      - openresty/1.11.2.1
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 775d75965b01105eed9092c3db86ea35.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - IJ1-UUSmVrhdsCKkDoPxBj8WCtMZ78QZqoYW2GpBrCBZY29cNEX2nQ==
     body:
       encoding: UTF-8
-      string: '[{"url":"https://ENV.test-app.link/LINK3xxx"},{"url":"https://ENV.test-app.link/LINK4xxx"}]'
+      string: '[{"url":"https://uym7.test-app.link/wzO80cmnQO"},{"url":"https://uym7.test-app.link/wzO80cmnQO"}]'
     http_version: 
-  recorded_at: Wed, 06 Jul 2016 12:38:39 GMT
+  recorded_at: Wed, 25 Jul 2018 16:16:28 GMT
 - request:
     method: post
     uri: https://api.branch.io/v1/url
@@ -164,30 +172,32 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Access-Control-Allow-Origin:
-      - "*"
       Content-Type:
-      - application/json; charset=utf-8
-      Date:
-      - Wed, 06 Jul 2016 12:38:39 GMT
-      Server:
-      - openresty/1.7.7.2
-      X-Content-Type-Options:
-      - nosniff
-      X-Powered-By:
-      - Express
+      - application/json
       Content-Length:
       - '47'
       Connection:
       - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Date:
+      - Wed, 25 Jul 2018 16:16:28 GMT
+      Server:
+      - openresty/1.11.2.1
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 80a9a66193c3e6350d12faf1c397c974.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - hBZLvZ3-iAPP3Y0VuATcR-uWsOxBaJYk7SvciwLzigQN0y-Cwz7O5w==
     body:
       encoding: UTF-8
-      string: '{"url":"https://ENV.test-app.link/LINK5xxx"}'
+      string: '{"url":"https://uym7.test-app.link/2P5ZMemnQO"}'
     http_version: 
-  recorded_at: Wed, 06 Jul 2016 12:38:39 GMT
+  recorded_at: Wed, 25 Jul 2018 16:16:29 GMT
 - request:
     method: get
-    uri: https://api.branch.io/v1/url?branch_key=<BRANCH_KEY>&url=https://ENV.test-app.link/LINK5xxx
+    uri: https://api.branch.io/v1/url?branch_key=<BRANCH_KEY>&url=https://uym7.test-app.link/2P5ZMemnQO
     body:
       encoding: US-ASCII
       string: ''
@@ -201,29 +211,31 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Access-Control-Allow-Origin:
-      - "*"
       Content-Type:
-      - application/json; charset=utf-8
-      Date:
-      - Wed, 06 Jul 2016 12:38:40 GMT
-      Etag:
-      - W/"fb-2700212854"
-      Server:
-      - openresty/1.7.7.2
-      X-Content-Type-Options:
-      - nosniff
-      X-Powered-By:
-      - Express
+      - application/json
       Content-Length:
-      - '251'
+      - '285'
       Connection:
       - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Date:
+      - Wed, 25 Jul 2018 16:16:29 GMT
+      Server:
+      - openresty/1.11.2.1
+      Vary:
+      - Accept-Encoding
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 6e4552eff3e310bad9fd1a8c14b867d8.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - C_V8Mh69LKAKEh6XMaCBi_sW_9gGx7uhLBpClOKdVW8LTT2lgxk75Q==
     body:
       encoding: UTF-8
-      string: '{"channel":"code","feature":"test","tags":["test"],"data":{"$one_time_use":false,"~channel":"code","~creation_source":0,"~feature":"test","~id":"279190676690858328","~tags":["test"],"url":"https://ENV.test-app.link/LINK5xxx"},"type":0,"alias":null}'
+      string: '{"data":{"+url":"https://uym7.test-app.link/2P5ZMemnQO","~tags":["test"],"~creation_source":0,"~id":"550700213116223952","$one_time_use":false,"~channel":"code","~feature":"test","url":"https://uym7.test-app.link/2P5ZMemnQO"},"type":0,"tags":["test"],"feature":"test","channel":"code"}'
     http_version: 
-  recorded_at: Wed, 06 Jul 2016 12:38:40 GMT
+  recorded_at: Wed, 25 Jul 2018 16:16:29 GMT
 - request:
     method: post
     uri: https://api.branch.io/v1/url
@@ -240,30 +252,32 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Access-Control-Allow-Origin:
-      - "*"
       Content-Type:
-      - application/json; charset=utf-8
-      Date:
-      - Wed, 06 Jul 2016 12:38:41 GMT
-      Server:
-      - openresty/1.7.7.2
-      X-Content-Type-Options:
-      - nosniff
-      X-Powered-By:
-      - Express
+      - application/json
       Content-Length:
       - '47'
       Connection:
       - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Date:
+      - Wed, 25 Jul 2018 16:16:29 GMT
+      Server:
+      - openresty/1.11.2.1
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 91085d9a0810fca6dacd51dae7dd6a32.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - 4mX8afdsGBN20X1-P_KcCHAIwYLCcXxs7BQqa96wTVosEfsPDHbjVQ==
     body:
       encoding: UTF-8
-      string: '{"url":"https://ENV.test-app.link/LINK6xxx"}'
+      string: '{"url":"https://uym7.test-app.link/vvb0YimnQO"}'
     http_version: 
-  recorded_at: Wed, 06 Jul 2016 12:38:41 GMT
+  recorded_at: Wed, 25 Jul 2018 16:16:29 GMT
 - request:
     method: put
-    uri: https://api.branch.io/v1/url?url=https://ENV.test-app.link/LINK6xxx
+    uri: https://api.branch.io/v1/url?url=https://uym7.test-app.link/vvb0YimnQO
     body:
       encoding: UTF-8
       string: '{"sdk":"api","branch_key":"<BRANCH_KEY>","branch_secret":"<BRANCH_SECRET>","channel":"retest"}'
@@ -277,30 +291,32 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Access-Control-Allow-Origin:
-      - "*"
       Content-Type:
-      - application/json; charset=utf-8
-      Date:
-      - Wed, 06 Jul 2016 12:38:41 GMT
-      Server:
-      - openresty/1.7.7.2
-      X-Content-Type-Options:
-      - nosniff
-      X-Powered-By:
-      - Express
+      - application/json
       Content-Length:
-      - '283'
+      - '256'
       Connection:
       - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Date:
+      - Wed, 25 Jul 2018 16:16:30 GMT
+      Server:
+      - openresty/1.11.2.1
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 f9a9e5a2fe899e7acf3e13d8d7a34642.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - g11KiLBIp6DqQA4kRvXPcXlZA1gSPQvM1AEoRdznTkJMuvqFUQracA==
     body:
       encoding: UTF-8
-      string: '{"channel":"retest","feature":"test","tags":["test","test-update"],"data":{"$one_time_use":false,"~channel":"retest","~creation_source":0,"~feature":"test","~id":"279214820782371109","~tags":["test","test-update"],"url":"https://ENV.test-app.link/LINK6xxx"},"type":0,"alias":null}'
+      string: '{"data":{"+url":"https://uym7.test-app.link/vvb0YimnQO","~creation_source":0,"$one_time_use":false,"~id":"550700216958093103","~channel":"retest","~feature":"test","url":"https://uym7.test-app.link/vvb0YimnQO"},"type":0,"feature":"test","channel":"retest"}'
     http_version: 
-  recorded_at: Wed, 06 Jul 2016 12:38:42 GMT
+  recorded_at: Wed, 25 Jul 2018 16:16:30 GMT
 - request:
     method: get
-    uri: https://api.branch.io/v1/url?branch_key=<BRANCH_KEY>&url=https://ENV.test-app.link/LINK6xxx
+    uri: https://api.branch.io/v1/url?branch_key=<BRANCH_KEY>&url=https://uym7.test-app.link/vvb0YimnQO
     body:
       encoding: US-ASCII
       string: ''
@@ -314,255 +330,31 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Access-Control-Allow-Origin:
-      - "*"
       Content-Type:
-      - application/json; charset=utf-8
-      Date:
-      - Wed, 06 Jul 2016 12:38:42 GMT
-      Etag:
-      - W/"11b-1678275163"
-      Server:
-      - openresty/1.7.7.2
-      X-Content-Type-Options:
-      - nosniff
-      X-Powered-By:
-      - Express
+      - application/json
       Content-Length:
-      - '283'
+      - '256'
       Connection:
       - keep-alive
-    body:
-      encoding: UTF-8
-      string: '{"channel":"retest","feature":"test","tags":["test","test-update"],"data":{"$one_time_use":false,"~channel":"retest","~creation_source":0,"~feature":"test","~id":"279214820782371109","~tags":["test","test-update"],"url":"https://ENV.test-app.link/LINK6xxx"},"type":0,"alias":null}'
-    http_version: 
-  recorded_at: Wed, 06 Jul 2016 12:38:42 GMT
-- request:
-    method: post
-    uri: https://api.branch.io/v1/url
-    body:
-      encoding: UTF-8
-      string: '{"sdk":"api","branch_key":"<BRANCH_KEY>","tags":["test"],"channel":"test","stage":"test","data":{"value":42}}'
-    headers:
-      Content-Type:
-      - application/json
-      Accept:
-      - application/json
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
       Access-Control-Allow-Origin:
       - "*"
-      Content-Type:
-      - application/json; charset=utf-8
       Date:
-      - Wed, 06 Jul 2016 13:56:20 GMT
+      - Wed, 25 Jul 2018 16:16:30 GMT
       Server:
-      - openresty/1.7.7.2
-      X-Content-Type-Options:
-      - nosniff
-      X-Powered-By:
-      - Express
-      Content-Length:
-      - '47'
-      Connection:
-      - keep-alive
+      - openresty/1.11.2.1
+      Vary:
+      - Accept-Encoding
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 70baa6f69f875c9e172c9118322fd6b5.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - uCQ6txTs7vsbOiEfAjl1GKMrVn92eWRNjrdgPQdPHkaaH_Z6CEPztQ==
     body:
       encoding: UTF-8
-      string: '{"url":"https://ENV.test-app.link/LINK7xxx"}'
+      string: '{"data":{"+url":"https://uym7.test-app.link/vvb0YimnQO","~creation_source":0,"~id":"550700216958093103","$one_time_use":false,"~channel":"retest","~feature":"test","url":"https://uym7.test-app.link/vvb0YimnQO"},"type":0,"feature":"test","channel":"retest"}'
     http_version: 
-  recorded_at: Wed, 06 Jul 2016 13:56:21 GMT
-- request:
-    method: post
-    uri: https://api.branch.io/v1/url
-    body:
-      encoding: UTF-8
-      string: '{"sdk":"api","branch_key":"<BRANCH_KEY>","tags":["test"],"channel":"code"}'
-    headers:
-      Content-Type:
-      - application/json
-      Accept:
-      - application/json
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Access-Control-Allow-Origin:
-      - "*"
-      Content-Type:
-      - application/json; charset=utf-8
-      Date:
-      - Wed, 06 Jul 2016 13:56:21 GMT
-      Server:
-      - openresty/1.7.7.2
-      X-Content-Type-Options:
-      - nosniff
-      X-Powered-By:
-      - Express
-      Content-Length:
-      - '47'
-      Connection:
-      - keep-alive
-    body:
-      encoding: UTF-8
-      string: '{"url":"https://ENV.test-app.link/LINK8xxx"}'
-    http_version: 
-  recorded_at: Wed, 06 Jul 2016 13:56:21 GMT
-- request:
-    method: get
-    uri: https://api.branch.io/v1/url?branch_key=<BRANCH_KEY>&url=https://ENV.test-app.link/LINK8xxx
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Content-Type:
-      - application/json
-      Accept:
-      - application/json
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Access-Control-Allow-Origin:
-      - "*"
-      Content-Type:
-      - application/json; charset=utf-8
-      Date:
-      - Wed, 06 Jul 2016 13:56:22 GMT
-      Etag:
-      - W/"d8-2814673697"
-      Server:
-      - openresty/1.7.7.2
-      X-Content-Type-Options:
-      - nosniff
-      X-Powered-By:
-      - Express
-      Content-Length:
-      - '216'
-      Connection:
-      - keep-alive
-    body:
-      encoding: UTF-8
-      string: '{"channel":"code","tags":["test"],"data":{"$one_time_use":false,"~channel":"code","~creation_source":0,"~id":"279236439382847620","~tags":["test"],"url":"https://ENV.test-app.link/LINK8xxx"},"type":0,"alias":null}'
-    http_version: 
-  recorded_at: Wed, 06 Jul 2016 13:56:22 GMT
-- request:
-    method: post
-    uri: https://api.branch.io/v1/url
-    body:
-      encoding: UTF-8
-      string: '{"sdk":"api","branch_key":"<BRANCH_KEY>","tags":["test","test-update"],"channel":"code"}'
-    headers:
-      Content-Type:
-      - application/json
-      Accept:
-      - application/json
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Access-Control-Allow-Origin:
-      - "*"
-      Content-Type:
-      - application/json; charset=utf-8
-      Date:
-      - Wed, 06 Jul 2016 13:56:23 GMT
-      Server:
-      - openresty/1.7.7.2
-      X-Content-Type-Options:
-      - nosniff
-      X-Powered-By:
-      - Express
-      Content-Length:
-      - '47'
-      Connection:
-      - keep-alive
-    body:
-      encoding: UTF-8
-      string: '{"url":"https://ENV.test-app.link/LINK9xxx"}'
-    http_version: 
-  recorded_at: Wed, 06 Jul 2016 13:56:23 GMT
-- request:
-    method: put
-    uri: https://api.branch.io/v1/url?url=https://ENV.test-app.link/LINK9xxx
-    body:
-      encoding: UTF-8
-      string: '{"sdk":"api","branch_key":"<BRANCH_KEY>","branch_secret":"<BRANCH_SECRET>","channel":"retest"}'
-    headers:
-      Content-Type:
-      - application/json
-      Accept:
-      - application/json
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Access-Control-Allow-Origin:
-      - "*"
-      Content-Type:
-      - application/json; charset=utf-8
-      Date:
-      - Wed, 06 Jul 2016 13:56:23 GMT
-      Server:
-      - openresty/1.7.7.2
-      X-Content-Type-Options:
-      - nosniff
-      X-Powered-By:
-      - Express
-      Content-Length:
-      - '248'
-      Connection:
-      - keep-alive
-    body:
-      encoding: UTF-8
-      string: '{"channel":"retest","tags":["test","test-update"],"data":{"$one_time_use":false,"~channel":"retest","~creation_source":0,"~id":"279236445598774158","~tags":["test","test-update"],"url":"https://ENV.test-app.link/LINK9xxx"},"type":0,"alias":null}'
-    http_version: 
-  recorded_at: Wed, 06 Jul 2016 13:56:23 GMT
-- request:
-    method: get
-    uri: https://api.branch.io/v1/url?branch_key=<BRANCH_KEY>&url=https://ENV.test-app.link/LINK9xxx
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Content-Type:
-      - application/json
-      Accept:
-      - application/json
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Access-Control-Allow-Origin:
-      - "*"
-      Content-Type:
-      - application/json; charset=utf-8
-      Date:
-      - Wed, 06 Jul 2016 13:56:24 GMT
-      Etag:
-      - W/"f8-1592842631"
-      Server:
-      - openresty/1.7.7.2
-      X-Content-Type-Options:
-      - nosniff
-      X-Powered-By:
-      - Express
-      Content-Length:
-      - '248'
-      Connection:
-      - keep-alive
-    body:
-      encoding: UTF-8
-      string: '{"channel":"retest","tags":["test","test-update"],"data":{"$one_time_use":false,"~channel":"retest","~creation_source":0,"~id":"279236445598774158","~tags":["test","test-update"],"url":"https://ENV.test-app.link/LINK9xxx"},"type":0,"alias":null}'
-    http_version: 
-  recorded_at: Wed, 06 Jul 2016 13:56:24 GMT
+  recorded_at: Wed, 25 Jul 2018 16:16:30 GMT
 - request:
     method: post
     uri: https://api.branch.io/v2/event/standard
@@ -588,22 +380,22 @@ http_interactions:
       Access-Control-Allow-Origin:
       - "*"
       Date:
-      - Tue, 24 Jul 2018 02:29:37 GMT
+      - Wed, 25 Jul 2018 16:16:31 GMT
       Server:
       - openresty/1.11.2.1
       X-Cache:
       - Error from cloudfront
       Via:
-      - 1.1 e1fec368f5b53b4a839d0400d00dede6.cloudfront.net (CloudFront)
+      - 1.1 34a84b82ff144b427f99aaae61510d21.cloudfront.net (CloudFront)
       X-Amz-Cf-Id:
-      - 7chy17Q3u2kJSDgbNFzMEcj7E02zOC_oNw-ivCXvDxaP_YSgm7_RPQ==
+      - qqjvlvgANLysmtCmei6mzcUrQ0M_odEN_NaH_PWiaXfwUMIA3xlXjw==
     body:
       encoding: UTF-8
       string: '{"error":{"user_data":"missing required field"}}
 
 '
     http_version: 
-  recorded_at: Tue, 24 Jul 2018 02:29:37 GMT
+  recorded_at: Wed, 25 Jul 2018 16:16:31 GMT
 - request:
     method: post
     uri: https://api.branch.io/v2/event/standard
@@ -629,15 +421,15 @@ http_interactions:
       Access-Control-Allow-Origin:
       - "*"
       Date:
-      - Tue, 24 Jul 2018 02:29:37 GMT
+      - Wed, 25 Jul 2018 16:16:31 GMT
       Server:
       - openresty/1.11.2.1
       X-Cache:
       - Error from cloudfront
       Via:
-      - 1.1 40346f3f2e6491f9dd0c511645b5834d.cloudfront.net (CloudFront)
+      - 1.1 fb176da9df72832dd488674f28c0a880.cloudfront.net (CloudFront)
       X-Amz-Cf-Id:
-      - uuF1F4PUsm-U5Ex8Vbx7yVy-rcQ0XnbGR_tuMPab0putZxkZ6zItAQ==
+      - c6kqdW63aB_QqnvC8hPVPRwm_VHsTEzPyDRwYvEHNvvvXsPmoqsq9w==
     body:
       encoding: UTF-8
       string: '{"error":{"user_data":["Request with non-mobile OS should have developer_identity
@@ -646,7 +438,7 @@ http_interactions:
 
 '
     http_version: 
-  recorded_at: Tue, 24 Jul 2018 02:29:37 GMT
+  recorded_at: Wed, 25 Jul 2018 16:16:32 GMT
 - request:
     method: post
     uri: https://api.branch.io/v2/event/standard
@@ -675,7 +467,7 @@ http_interactions:
       Access-Control-Allow-Origin:
       - "*"
       Date:
-      - Tue, 24 Jul 2018 02:29:37 GMT
+      - Wed, 25 Jul 2018 16:16:32 GMT
       Server:
       - openresty/1.11.2.1
       X-Branch-Event-Extra:
@@ -683,14 +475,14 @@ http_interactions:
       X-Cache:
       - Miss from cloudfront
       Via:
-      - 1.1 0ab36911ca4960d388d49f382630062c.cloudfront.net (CloudFront)
+      - 1.1 91085d9a0810fca6dacd51dae7dd6a32.cloudfront.net (CloudFront)
       X-Amz-Cf-Id:
-      - WWF8KtgzmeMhjxpx4zMW2vIWLfKxTCq2oj_YoSAVo3y4e7tJZCZqcw==
+      - VNYJBeiYpLl7yUKsJMy6CYAezO_IirVF-xMig7rlA89jbiZBalohkA==
     body:
       encoding: UTF-8
       string: '{"branch_view_enabled":false}'
     http_version: 
-  recorded_at: Tue, 24 Jul 2018 02:29:37 GMT
+  recorded_at: Wed, 25 Jul 2018 16:16:32 GMT
 - request:
     method: post
     uri: https://api.branch.io/v2/event/standard
@@ -716,7 +508,7 @@ http_interactions:
       Access-Control-Allow-Origin:
       - "*"
       Date:
-      - Tue, 24 Jul 2018 02:29:38 GMT
+      - Wed, 25 Jul 2018 16:16:33 GMT
       Server:
       - openresty/1.11.2.1
       X-Branch-Event-Extra:
@@ -724,14 +516,59 @@ http_interactions:
       X-Cache:
       - Miss from cloudfront
       Via:
-      - 1.1 e8cd61c9b2a785e4fc8167b0177016b8.cloudfront.net (CloudFront)
+      - 1.1 1728256c36c9016e0b9379e91a1c2e68.cloudfront.net (CloudFront)
       X-Amz-Cf-Id:
-      - qZnIAEWr9EkUIAfu0HK6E06BJuvnSdC8xAXyO-jyeYkmLyz9oP1nkg==
+      - mhdgCP-seFys2XQT4MsxxxjhGR6XPtyvYIoHIQ_PLplr4aN-N7Dt1A==
     body:
       encoding: UTF-8
       string: '{"branch_view_enabled":false}'
     http_version: 
-  recorded_at: Tue, 24 Jul 2018 02:29:38 GMT
+  recorded_at: Wed, 25 Jul 2018 16:16:33 GMT
+- request:
+    method: post
+    uri: https://api.branch.io/v2/event/standard
+    body:
+      encoding: UTF-8
+      string: '{"sdk":"api","branch_key":"<BRANCH_KEY>","name":"RANDOM_EVENT_NAME","user_data":{"os":"iOS","os_version":"11.0.1","environment":"FULL_APP","developer_identity":"1","app_version":"1.0.1"},"custom_data":{"purchase_location":"Joes
+        Liquor Barn","store_pickup":"unavailable"},"event_data":{"currency":"USD","shipping":5,"tax":0,"revenue":35,"transaction_id":"Order-11"},"content_items":[{"$content_schema":"COMMERCE_PRODUCT","$price":100,"$quantity":2,"$sku":"112320","$product_name":"Domaine
+        de la Romanee-Conti Romanee-Conti Grand Cru 1990.","$product_category":"FOOD_BEVERAGES_AND_TOBACCO","$product_variant":"750ml
+        Current Vintage"}],"metadata":{}}'
+    headers:
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '94'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Date:
+      - Wed, 25 Jul 2018 16:16:33 GMT
+      Server:
+      - openresty/1.11.2.1
+      X-Cache:
+      - Error from cloudfront
+      Via:
+      - 1.1 a0dab1619e09a1e6e84a759dfdfe7343.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - F-noJiOp3U9u4Odu9cnltwZwAzWsaAlqdo9GQ9eodX6c4HfszMV8Wg==
+    body:
+      encoding: UTF-8
+      string: '{"error":{"content_items":[{}],"custom_data":{},"name":"not a valid
+        option","event_data":{}}}
+
+'
+    http_version: 
+  recorded_at: Wed, 25 Jul 2018 16:16:33 GMT
 - request:
     method: post
     uri: https://api.branch.io/v2/event/custom
@@ -757,28 +594,29 @@ http_interactions:
       Access-Control-Allow-Origin:
       - "*"
       Date:
-      - Tue, 24 Jul 2018 03:15:27 GMT
+      - Wed, 25 Jul 2018 16:16:34 GMT
       Server:
       - openresty/1.11.2.1
       X-Cache:
       - Error from cloudfront
       Via:
-      - 1.1 f5171077d7910626ec3cf65e0c222f3c.cloudfront.net (CloudFront)
+      - 1.1 a0dab1619e09a1e6e84a759dfdfe7343.cloudfront.net (CloudFront)
       X-Amz-Cf-Id:
-      - xNAUnCTZ2dH_qBlMhpjAi8VkkiM3Nc2QO0z38NksEhfFwwo6cJf27g==
+      - jSqnI5GrbiVyGKGydrVUqI0QzYTC5H5WZOSBPzPJWVf_T1zsAQfLHQ==
     body:
       encoding: UTF-8
       string: '{"error":{"user_data":"missing required field"}}
 
 '
     http_version: 
-  recorded_at: Tue, 24 Jul 2018 03:15:27 GMT
+  recorded_at: Wed, 25 Jul 2018 16:16:34 GMT
 - request:
     method: post
     uri: https://api.branch.io/v2/event/standard
     body:
       encoding: UTF-8
-      string: '{"sdk":"api","branch_key":"<BRANCH_KEY>","name":"Purchase","user_data":{"environment":"FULL_APP"},"event_data":{"currency":"USD","shipping":5,"tax":0,"revenue":35,"transaction_id":"Order-11"}}'
+      string: '{"sdk":"api","branch_key":"<BRANCH_KEY>","name":"TAKING PICTURE","user_data":{"os":"iOS","os_version":"11.0.1","environment":"FULL_APP","developer_identity":"1","app_version":"1.0.1"},"custom_data":{"picture_location":"Joes
+        Liquor Barn"}}'
     headers:
       Content-Type:
       - application/json
@@ -792,39 +630,35 @@ http_interactions:
       Content-Type:
       - application/json
       Content-Length:
-      - '252'
+      - '57'
       Connection:
       - keep-alive
       Access-Control-Allow-Origin:
       - "*"
       Date:
-      - Tue, 24 Jul 2018 03:15:27 GMT
+      - Wed, 25 Jul 2018 16:16:35 GMT
       Server:
       - openresty/1.11.2.1
       X-Cache:
       - Error from cloudfront
       Via:
-      - 1.1 2a45d2b5ea9ef7dcb9d372459729c164.cloudfront.net (CloudFront)
+      - 1.1 dc82e67c3cbbf5963a8de3bcf19baccc.cloudfront.net (CloudFront)
       X-Amz-Cf-Id:
-      - OQaFvu-M4025jDwkeLTmuoF-HC0EPzATcOnpT1UD6oSFuZz9oTbGcQ==
+      - NgyPJVXGS8b841S-x8l7mF7YBkRrERB-MlagMndwk5e-LQB6Ouk-gA==
     body:
       encoding: UTF-8
-      string: '{"error":{"user_data":["Request with non-mobile OS should have developer_identity
-        and\/or browser_fingerprint_id","Request with non-mobile OS should have developer_identity
-        and\/or browser_fingerprint_id"],"name":"not a valid option","event_data":{}}}
+      string: '{"error":{"name":"not a valid option","custom_data":{}}}
 
 '
     http_version: 
-  recorded_at: Tue, 24 Jul 2018 03:15:28 GMT
+  recorded_at: Wed, 25 Jul 2018 16:16:35 GMT
 - request:
     method: post
     uri: https://api.branch.io/v2/event/custom
     body:
       encoding: UTF-8
-      string: '{"sdk":"api","branch_key":"<BRANCH_KEY>","name":"PURCHASE","user_data":{"os":"iOS","os_version":"11.0.1","environment":"FULL_APP","developer_identity":"1","app_version":"1.0.1"},"custom_data":{"purchase_location":"Joes
-        Liquor Barn","store_pickup":"unavailable"},"event_data":{"currency":"USD","shipping":5,"tax":0,"revenue":35,"transaction_id":"Order-11"},"content_items":[{"$content_schema":"COMMERCE_PRODUCT","$price":100,"$quantity":2,"$sku":"112320","$product_name":"Domaine
-        de la Romanee-Conti Romanee-Conti Grand Cru 1990.","$product_category":"FOOD_BEVERAGES_AND_TOBACCO","$product_variant":"750ml
-        Current Vintage"}],"metadata":{}}'
+      string: '{"sdk":"api","branch_key":"<BRANCH_KEY>","name":"TAKING PICTURE","user_data":{"os":"iOS","os_version":"11.0.1","environment":"FULL_APP","developer_identity":"1","app_version":"1.0.1"},"custom_data":{"picture_location":"Joes
+        Liquor Barn"}}'
     headers:
       Content-Type:
       - application/json
@@ -844,7 +678,7 @@ http_interactions:
       Access-Control-Allow-Origin:
       - "*"
       Date:
-      - Tue, 24 Jul 2018 03:15:28 GMT
+      - Wed, 25 Jul 2018 16:25:06 GMT
       Server:
       - openresty/1.11.2.1
       X-Branch-Event-Extra:
@@ -852,140 +686,12 @@ http_interactions:
       X-Cache:
       - Miss from cloudfront
       Via:
-      - 1.1 c795828dd110eb9881b0d985e479eaac.cloudfront.net (CloudFront)
+      - 1.1 f92e2b771ebc524db2f478f72162e565.cloudfront.net (CloudFront)
       X-Amz-Cf-Id:
-      - yn9lNJ_MZMLmXVaXweE7wEd_VkoGGM8QHW9Ng6GfkPrgvNpTrWReVw==
+      - v814fYmiNxU_IRGnjoQsZHg_FLfn8pflTUBsUb66dNlcVijA1pkxaQ==
     body:
       encoding: UTF-8
       string: '{"branch_view_enabled":false}'
     http_version: 
-  recorded_at: Tue, 24 Jul 2018 03:15:28 GMT
-- request:
-    method: post
-    uri: https://api.branch.io/v2/event/custom
-    body:
-      encoding: UTF-8
-      string: '{"sdk":"api","branch_key":"<BRANCH_KEY>","name":"PURCHASE","user_data":{"os":"Android","os_version":"4.0.0","environment":"FULL_APP","developer_identity":"1","app_version":"1.0.1"},"event_data":{"currency":"USD","shipping":5,"tax":0,"revenue":35,"transaction_id":"Order-11"}}'
-    headers:
-      Content-Type:
-      - application/json
-      Accept:
-      - application/json
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json
-      Content-Length:
-      - '29'
-      Connection:
-      - keep-alive
-      Access-Control-Allow-Origin:
-      - "*"
-      Date:
-      - Tue, 24 Jul 2018 03:15:29 GMT
-      Server:
-      - openresty/1.11.2.1
-      X-Branch-Event-Extra:
-      - "{}"
-      X-Cache:
-      - Miss from cloudfront
-      Via:
-      - 1.1 2feec21fa6ad8ca419b922ab129d0a2a.cloudfront.net (CloudFront)
-      X-Amz-Cf-Id:
-      - 20bpMguyCpT8uDEkRYNhSPmJlTF1F05eWaN5qNP1JcUyYv8Ao8V1Rw==
-    body:
-      encoding: UTF-8
-      string: '{"branch_view_enabled":false}'
-    http_version: 
-  recorded_at: Tue, 24 Jul 2018 03:15:29 GMT
-- request:
-    method: post
-    uri: https://api.branch.io/v2/event/standard
-    body:
-      encoding: UTF-8
-      string: '{"sdk":"api","branch_key":"<BRANCH_KEY>","name":"Purchase","user_data":{"os":"iOS","os_version":"11.0.1","environment":"FULL_APP","developer_identity":"1","app_version":"1.0.1"},"custom_data":{"purchase_location":"Joes
-        Liquor Barn","store_pickup":"unavailable"},"event_data":{"currency":"USD","shipping":5,"tax":0,"revenue":35,"transaction_id":"Order-11"},"content_items":[{"$content_schema":"COMMERCE_PRODUCT","$price":100,"$quantity":2,"$sku":"112320","$product_name":"Domaine
-        de la Romanee-Conti Romanee-Conti Grand Cru 1990.","$product_category":"FOOD_BEVERAGES_AND_TOBACCO","$product_variant":"750ml
-        Current Vintage"}],"metadata":{}}'
-    headers:
-      Content-Type:
-      - application/json
-      Accept:
-      - application/json
-  response:
-    status:
-      code: 400
-      message: Bad Request
-    headers:
-      Content-Type:
-      - application/json
-      Content-Length:
-      - '94'
-      Connection:
-      - keep-alive
-      Access-Control-Allow-Origin:
-      - "*"
-      Date:
-      - Tue, 24 Jul 2018 03:17:04 GMT
-      Server:
-      - openresty/1.11.2.1
-      X-Cache:
-      - Error from cloudfront
-      Via:
-      - 1.1 9c77410e22dc74e7bd4296ee24a7bbce.cloudfront.net (CloudFront)
-      X-Amz-Cf-Id:
-      - ncvi_wXDHCj2zEhWyVE4btBAdMDqUzM3PREY_RXXj3kMh76Fp24L1w==
-    body:
-      encoding: UTF-8
-      string: '{"error":{"content_items":[{}],"custom_data":{},"name":"not a valid
-        option","event_data":{}}}
-
-'
-    http_version: 
-  recorded_at: Tue, 24 Jul 2018 03:17:04 GMT
-- request:
-    method: post
-    uri: https://api.branch.io/v2/event/custom
-    body:
-      encoding: UTF-8
-      string: '{"sdk":"api","branch_key":"<BRANCH_KEY>","name":"PICTURE_SWIPED","user_data":{"os":"iOS","os_version":"11.0.1","environment":"FULL_APP","developer_identity":"1","app_version":"1.0.1"},"custom_data":{"picture_location":"Joes
-        Liquor Barn","store_pickup":"unavailable"}}'
-    headers:
-      Content-Type:
-      - application/json
-      Accept:
-      - application/json
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json
-      Content-Length:
-      - '29'
-      Connection:
-      - keep-alive
-      Access-Control-Allow-Origin:
-      - "*"
-      Date:
-      - Tue, 24 Jul 2018 05:08:44 GMT
-      Server:
-      - openresty/1.11.2.1
-      X-Branch-Event-Extra:
-      - "{}"
-      X-Cache:
-      - Miss from cloudfront
-      Via:
-      - 1.1 3cbfe28b5f1fd858b3466f86889d19b3.cloudfront.net (CloudFront)
-      X-Amz-Cf-Id:
-      - E6gfKroicu3k4g104_yacAy7xYrAjyV47uzSYdgQKLeE1gVoGc5kng==
-    body:
-      encoding: UTF-8
-      string: '{"branch_view_enabled":false}'
-    http_version: 
-  recorded_at: Tue, 24 Jul 2018 05:08:44 GMT
+  recorded_at: Wed, 25 Jul 2018 16:25:06 GMT
 recorded_with: VCR 3.0.3
